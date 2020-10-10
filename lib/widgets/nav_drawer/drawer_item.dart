@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:webapp/widgets/nav_bar/nav_bar_item.dart';
+import 'package:webapp/widgets/nav_drawer/drawer_nav_item.dart';
 
 class DrawerItem extends StatelessWidget {
   final String title;
@@ -15,7 +16,7 @@ class DrawerItem extends StatelessWidget {
         children: <Widget>[
           Icon(icon),
           SizedBox(width: 30),
-          NavBarItem(title, navigationPath),
+          DrawerNavItem(title, navigationPath),
         ],
       ),
     );

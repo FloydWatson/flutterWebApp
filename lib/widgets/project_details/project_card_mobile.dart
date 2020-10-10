@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:webapp/widgets/call_to_action/call_to_action.dart';
 import 'package:webapp/widgets/project_details/project_details.dart';
 
+import 'package:webapp/constants/app_colors.dart';
+
 class ProjectCardMobile extends StatelessWidget {
   final String imagePath;
   final String title;
@@ -35,7 +37,7 @@ class ProjectCardMobile extends StatelessWidget {
                 ClipRRect(
                   borderRadius: BorderRadius.circular(8.0),
                                   child: Container(
-                    color: Colors.white60,
+                    color: lightPrimary.withOpacity(0.8),
                     child: Padding(
                       padding: const EdgeInsets.all(4),
                       child: ProjectDetails(title: title, body: body),

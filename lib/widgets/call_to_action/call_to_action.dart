@@ -14,11 +14,11 @@ class CallToAction extends StatelessWidget {
         style: TextStyle(
           fontSize: 18,
           fontWeight: FontWeight.w800,
-          color: Colors.white,
+          color: darkPrimary,
         ),
       ),
       decoration: BoxDecoration(
-        color: primaryColor,
+        color: brightAccent,
         borderRadius: BorderRadius.circular(5),
       ),
     );

@@ -8,6 +8,8 @@ import 'package:webapp/widgets/centered_view/centered_view.dart';
 import 'package:webapp/widgets/nav_bar/nav_bar.dart';
 import 'package:webapp/widgets/nav_drawer/nav_drawer.dart';
 
+import 'package:webapp/constants/app_colors.dart';
+
 class LayoutTemplate extends StatelessWidget {
   const LayoutTemplate({Key key}) : super(key: key);
 
@@ -18,19 +20,25 @@ class LayoutTemplate extends StatelessWidget {
         drawer: sizingInformation.deviceScreenType == DeviceScreenType.mobile
             ? NavDrawer()
             : null,
-        backgroundColor: Colors.white,
+        backgroundColor: darkPrimary,
         body: CenteredView(
-          child: Column(
-            children: <Widget>[
-              NavBar(),
-              Expanded(
-                child: Navigator(
-                  key: locator<NavService>().navigatorKey,
-                  onGenerateRoute: generateRoute,
-                  initialRoute: HomeRoute,
-                ),
-              )
-            ],
+          child: Container(
+            color: lightPrimary,
+            child: Padding(
+              padding: const EdgeInsets.all(32),
+              child: Column(
+                children: <Widget>[
+                  NavBar(),
+                  Expanded(
+                    child: Navigator(
+                      key: locator<NavService>().navigatorKey,
+                      onGenerateRoute: generateRoute,
+                      initialRoute: HomeRoute,
+                    ),
+                  )
+                ],
+              ),
+            ),
           ),
         ),
       ),

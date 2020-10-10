@@ -23,6 +23,7 @@ environment:
 dependencies:
   responsive_builder: ^0.3.0
   get_it: ^5.0.1
+  provider: ^4.1.3
   flutter:
     sdk: flutter
 
