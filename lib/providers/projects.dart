@@ -30,6 +30,12 @@ class Projects with ChangeNotifier {
       },
     ]
   });
+
+  List<Project> get projects{
+    return this.projectList.projects;
+  }
+
+
 }
 
 class ProjectList {
